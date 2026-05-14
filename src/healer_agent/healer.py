@@ -335,6 +335,8 @@ def get_fixed_code(target_file, file_content, diagnosis,supporting_context):
     1. If the SOURCE CODE calls a method that doesn't exist in the SUPPORTING CONTEXT, change the call to a method that DOES exist.
     2. Only output the full corrected code for {target_file} in a markdown block.
     3. Do not modify the Supporting Context files.
+    
+    Golden rule:NEVER fix an error by commenting out or deleting functional code. Instead, wrap failing code in try-except blocks or improve the internal logic of the functions to handle edge cases gracefully.
     """
     
     try:
