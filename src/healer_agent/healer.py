@@ -304,7 +304,7 @@ def get_diagnosis(file_content, error_log, target_file, supporting_context=""):
     3. THE REPAIR:
     If the bug is confirmed to be in '{target_file}', explain it and provide the fix.
 
-    Golden rule:NEVER suggest to fix an error by commenting out or deleting functional code. Instead, wrap failing code in try-except blocks or improve the internal logic of the functions to handle edge cases gracefully.
+    Golden rule:NEVER suggest to fix an error by commenting out or deleting functional code unless absolutely necessary. Instead, wrap failing code in try-except blocks or improve the internal logic of the functions to handle edge cases gracefully.
 
     DIAGNOSIS:"""
     
@@ -338,7 +338,7 @@ def get_fixed_code(target_file, file_content, diagnosis,supporting_context):
     2. Only output the full corrected code for {target_file} in a markdown block.
     3. Do not modify the Supporting Context files.
     
-    Golden rule:NEVER fix an error by commenting out or deleting functional code. Instead, wrap failing code in try-except blocks or improve the internal logic of the functions to handle edge cases gracefully.
+    When fixing a bug, you must preserve all existing logic and test cases. Do not comment out code to pass a health check. Instead, implement robust error handling (e.g., try-except, if-checks, or null-coalescing) to ensure the application remains functional.
     """
     
     try:
