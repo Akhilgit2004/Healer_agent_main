@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "healer-agent"
+version = "1.0.0"
+description = "AI-powered SRE agent for autonomous build repair"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "chromadb",
+    "fastapi",
+    "sentence-transformers",
+    "uvicorn",
+    "pydantic"
+]
+
+[project.scripts]
+healer = "healer_agent.healer:main"

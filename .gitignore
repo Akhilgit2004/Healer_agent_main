@@ -1,0 +1,7 @@
+venv/
+agent_memory/
+__pycache__/
+*.pyc
+a.out
+.env
+.DS_Store
