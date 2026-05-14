@@ -304,6 +304,8 @@ def get_diagnosis(file_content, error_log, target_file, supporting_context=""):
     3. THE REPAIR:
     If the bug is confirmed to be in '{target_file}', explain it and provide the fix.
 
+    Golden rule:NEVER suggest to fix an error by commenting out or deleting functional code. Instead, wrap failing code in try-except blocks or improve the internal logic of the functions to handle edge cases gracefully.
+
     DIAGNOSIS:"""
     
     try:
